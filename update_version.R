@@ -15,7 +15,7 @@ for(yy in 1974:2020){
   for(mm in 1:12){
     
     mms <- sprintf("%02d", mm)
-    for(dd in 27:31){
+    for(dd in 1:31){
     
       # Added a sample timer that going from 1-10 seconds of delay for the next request (TimeOut)
       #x<-sample(1:10,1)
@@ -27,9 +27,7 @@ for(yy in 1974:2020){
         #mm=2
         #dd=29
         #yy
-        if(!((mm==2)&&(dd==30) ||
-             !((mm==2)&&(dd==29)&&((yy==1972)||(yy==1976)||(yy==1980)||(yy==1984)||(yy==1988)||(yy==1992)||(yy==1996)||(yy==2000)||(yy==2004)||(yy==2008)||(yy==2012)||(yy==2016)||(yy==2020)||(yy==2024)||(yy==2028))  
-             )))
+        if(!((mm==2)&&(dd==30) || !((mm==2)&&(dd==29)&&((yy==1972)||(yy==1976)||(yy==1980)||(yy==1984)||(yy==1988)||(yy==1992)||(yy==1996)||(yy==2000)||(yy==2004)||(yy==2008)||(yy==2012)||(yy==2016)||(yy==2020)||(yy==2024)||(yy==2028)))))
         {
           dds <- sprintf("%02d", dd)
           dest <- paste(subDir, yys, mms, dds, ".png", sep="")
